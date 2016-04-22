@@ -1,5 +1,7 @@
 package com.example.android.blocodenotas.activities;
 
+import android.app.SearchManager;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -7,36 +9,31 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
 import com.example.android.blocodenotas.R;
-import com.example.android.blocodenotas.fragments.SettingsFragment;
+import com.example.android.blocodenotas.fragments.NoteListSearchFragment;
 
-/**
- * Created by Adauto on 28/03/2016.
- */
-public class SettingsActivity extends AppCompatActivity{
+public class SearchResultsActivity extends AppCompatActivity {
 
     private Toolbar mToolbar;
-
-
+    private String query;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
+        setContentView(R.layout.activity_search_results);
 
-        mToolbar = (Toolbar)findViewById(R.id.toolbar);
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        if (savedInstanceState == null) {
-            Bundle args = getIntent().getExtras();
-            if (args != null && args.containsKey("id")) {
-                long id = args.getLong("id", 0);
-                if (id > 0) {
-                    openFragment(SettingsFragment.newInstance(id), "Settings");
-                }
-            }
-            openFragment(SettingsFragment.newInstance(0), "Settings");
+        Intent myIntent = getIntent();
+        if(Intent.ACTION_SEARCH.equals(myIntent.getAction())) {
+            query = myIntent.getStringExtra(SearchManager.QUERY);
         }
+
+        NoteListSearchFragment searchFragment = new NoteListSearchFragment();
+        searchFragment.setQuery(query);
+        openFragment(searchFragment, query);
+
     }
 
     private void openFragment(final Fragment fragment, String title){
@@ -47,14 +44,12 @@ public class SettingsActivity extends AppCompatActivity{
                 .addToBackStack(null)
                 .commit();
         getSupportActionBar().setTitle(title);
+
     }
-    @Override
+
     public void onBackPressed()
     {
-        finish();
-
+        moveTaskToBack(true);
     }
-
-
 
 }

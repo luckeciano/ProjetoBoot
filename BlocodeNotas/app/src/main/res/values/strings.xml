@@ -10,10 +10,10 @@
     <string name="enter_content">Inserir Conteúdo</string>
     <string name="title_home">Principal</string>
     <string name="title_search">Busca</string>
-    <string name="button_order_name">Nome</string>
-    <string name="button_order_date_modified">Data de modificação</string>
-    <string name="order">Ordenação por:</string>
-    <string name="button_order_date_created">Data de criação</string>
+    <string name="search_hint">Inserir título, conteúdo ou tag</string>
+    <string name="button_order_title">Odernar por Título</string>
+    <string name="button_order_date_modified">Ordenar por Data de Modificação</string>
+    <string name="button_order_date_created">Ordenar por Data de Criação</string>
     <string name="title_editor">Editor</string>
     <string name="title_settings">Configurações</string>
     <string name="title_activity_note_editor">Editor de notas</string>

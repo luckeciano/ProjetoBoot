@@ -5,9 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
 
-import com.example.android.blocodenotas.models.Note;
 import com.example.android.blocodenotas.models.Tag;
-
 import com.example.android.blocodenotas.utility.Constag;
 
 import java.util.ArrayList;
@@ -56,6 +54,14 @@ public class TagManager {
         return null;
     }
 
+
+    //AQUIIIIII - Adicionar a busca pela query
+    public List<Tag> getAllTags(String querySearch){
+        List<Tag> tags = new ArrayList<Tag>();
+        return tags;
+    }
+
+
     public List<Tag> getAllTags(){
         List<Tag> tags = new ArrayList<Tag>();
         //zzz
@@ -81,6 +87,8 @@ public class TagManager {
         }
         return s.toString();
     }
+
+
 
     public void addTags(List<String> tags, Long note_id){
         List<Long> tagsIdsList = new ArrayList<>();

@@ -15,26 +15,42 @@
         android:textColor="@color/icons" />
 
         <Button
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="250dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ORDER BY TITLE"
-            android:id="@+id/button_order_title"
-            android:layout_gravity="center_horizontal" />
+            android:padding="@dimen/margin_padding_tiny"
+            android:layout_marginLeft="@dimen/margin_padding_xxnormal"
+            android:layout_marginRight="@dimen/margin_padding_xxnormal"
+            android:layout_marginBottom="@dimen/margin_padding_xxnormal"
+            android:gravity="center"
+            android:background="@color/primary"
+            android:textColor="@color/icons"
+            android:text="@string/button_order_title"
+            android:id="@+id/button_order_title" />
 
         <Button
-            android:layout_width="250dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Order by creation time"
-            android:id="@+id/button_order_creation_time"
-            android:layout_gravity="center_horizontal" />
+            android:padding="@dimen/margin_padding_tiny"
+            android:layout_marginLeft="@dimen/margin_padding_xxnormal"
+            android:layout_marginRight="@dimen/margin_padding_xxnormal"
+            android:layout_marginBottom="@dimen/margin_padding_xxnormal"
+            android:gravity="center"
+            android:background="@color/primary"
+            android:textColor="@color/icons"
+            android:text="@string/button_order_date_created"
+            android:id="@+id/button_order_creation_time"/>
 
         <Button
-            android:layout_width="250dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Order by modification time"
-            android:id="@+id/button_order_mod_time"
-            android:layout_gravity="center_horizontal" />
-
+            android:padding="@dimen/margin_padding_tiny"
+            android:layout_marginLeft="@dimen/margin_padding_xxnormal"
+            android:layout_marginRight="@dimen/margin_padding_xxnormal"
+            android:layout_marginBottom="@dimen/margin_padding_xxnormal"
+            android:gravity="center"
+            android:background="@color/primary"
+            android:textColor="@color/icons"
+            android:text="@string/button_order_date_modified"
+            android:id="@+id/button_order_mod_time"/>
 
 </LinearLayout>
