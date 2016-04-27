@@ -34,7 +34,6 @@ public class NoteListSearchFragment extends Fragment {
     private List<Note> mNotes;
     private List<Tag> mTags;
     private List<Rel> mRels;
-    //private String mTags;
     private RecyclerView mRecyclerView;
     private NoteListAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
@@ -58,16 +57,6 @@ public class NoteListSearchFragment extends Fragment {
 
         setupList();
         return mRootView;
-    }
-
-    public static NoteListSearchFragment newInstance(long id) {
-        NoteListSearchFragment fragment = new NoteListSearchFragment();
-        if (id > 0) {
-            Bundle bundle = new Bundle();
-            bundle.putLong("id", id);
-            fragment.setArguments(bundle);
-        }
-        return fragment;
     }
 
     private void setupList() {

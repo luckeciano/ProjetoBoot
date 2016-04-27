@@ -54,14 +54,6 @@ public class TagManager {
         return null;
     }
 
-
-    //AQUIIIIII - Adicionar a busca pela query
-    public List<Tag> getAllTags(String querySearch){
-        List<Tag> tags = new ArrayList<Tag>();
-        return tags;
-    }
-
-
     public List<Tag> getAllTags(){
         List<Tag> tags = new ArrayList<Tag>();
         //zzz

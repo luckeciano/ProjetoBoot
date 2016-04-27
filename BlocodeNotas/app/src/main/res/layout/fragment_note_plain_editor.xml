@@ -1,43 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <EditText
-    android:id="@+id/edit_text_title"
-    android:layout_margin="@dimen/margin_padding_tiny"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:hint="@string/enter_title"
-    android:background="@drawable/apptheme_edit_text_holo_light"
-    android:padding="@dimen/margin_padding_tiny"
-    android:gravity="start"
-    android:singleLine="true"
-    android:textStyle="bold"/>
-
-
-    <EditText
-    android:id="@+id/edit_text_note"
-    android:layout_margin="@dimen/margin_padding_tiny"
-    android:layout_width="match_parent"
-    android:layout_weight="1"
-    android:hint="@string/enter_content"
     android:layout_height="match_parent"
-    android:padding="@dimen/margin_padding_tiny"
-    android:gravity="top"
-    android:background="@drawable/apptheme_edit_text_holo_light"
-    android:inputType="textMultiLine"/>;
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/edit_text_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_padding_tiny"
+        android:background="@drawable/apptheme_edit_text_holo_light"
+        android:gravity="start"
+        android:hint="@string/enter_title"
+        android:padding="@dimen/margin_padding_tiny"
+        android:singleLine="true"
+        android:textStyle="bold" />
+
+
+    <EditText
+        android:id="@+id/edit_text_note"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_padding_tiny"
+        android:layout_weight="1"
+        android:autoLink="web"
+        android:background="@drawable/apptheme_edit_text_holo_light"
+        android:gravity="top"
+        android:hint="@string/enter_content"
+        android:inputType="textMultiLine"
+        android:linksClickable="true"
+        android:padding="@dimen/margin_padding_tiny" />;
 
     <EditText
         android:id="@+id/edit_text_tags"
-        android:layout_margin="@dimen/margin_padding_tiny"
         android:layout_width="match_parent"
-        android:layout_weight="3"
-        android:hint="@string/enter_tags"
         android:layout_height="match_parent"
-        android:padding="@dimen/margin_padding_tiny"
-        android:gravity="top"
+        android:layout_margin="@dimen/margin_padding_tiny"
+        android:layout_weight="3"
         android:background="@drawable/apptheme_edit_text_holo_light"
-        android:inputType="textMultiLine"/>;
+        android:gravity="top"
+        android:hint="@string/enter_tags"
+        android:inputType="textMultiLine"
+        android:padding="@dimen/margin_padding_tiny" />;
 
 </LinearLayout>

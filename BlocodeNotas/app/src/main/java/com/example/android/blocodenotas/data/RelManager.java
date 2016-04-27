@@ -5,7 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
 
-import com.example.android.blocodenotas.models.Note;
 import com.example.android.blocodenotas.models.Rel;
 import com.example.android.blocodenotas.utility.Constrel;
 
@@ -73,12 +72,6 @@ public class RelManager {
         }
         return note_ids;
     }
-
-    /*//Adicionar aqui dentro a busca pela query
-    public List<Rel> getAllRels(String querySearch){
-        List<Rel> rels = new ArrayList<Rel>();
-        return rels;
-    }*/
 
     public List<Rel> getNoteRels(long note_id){
         List<Rel> mCurrentNoteRels, rels = new ArrayList<Rel>();

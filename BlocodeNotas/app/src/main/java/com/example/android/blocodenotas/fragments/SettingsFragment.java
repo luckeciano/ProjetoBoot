@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.example.android.blocodenotas.R;
@@ -19,12 +18,9 @@ import com.example.android.blocodenotas.R;
 public class SettingsFragment extends Fragment implements View.OnClickListener {
 
     private View mRootView;
-    Button buttonExport;
     Button buttonOrderByTitle;
     Button buttonOrderByCreateTime;
     Button buttonOrderByModificationTime;
-    RadioGroup ordenationTypes;
-    int selected_id;
 
     private void makeToast(String mensagem){
         Toast.makeText(getActivity(), mensagem, Toast.LENGTH_SHORT).show();
@@ -55,13 +51,6 @@ public class SettingsFragment extends Fragment implements View.OnClickListener {
                              Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.fragment_settings,container,false);
         View v = inflater.inflate(R.layout.fragment_settings, container, false);
-        buttonExport = (Button) v.findViewById(R.id.export_button);
-        buttonExport.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick (View v){
-                makeToast("Exported");
-            }
-        });
 
         buttonOrderByTitle = (Button) v.findViewById(R.id.button_order_title);
         buttonOrderByTitle.setOnClickListener(new View.OnClickListener(){

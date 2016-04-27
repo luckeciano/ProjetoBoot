@@ -21,6 +21,8 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
         android:textColor="@color/secondary_text"
+        android:autoLink="web"
+        android:linksClickable="true"
         android:gravity="start"
         android:textSize="@dimen/text_size_xnormal" />
 

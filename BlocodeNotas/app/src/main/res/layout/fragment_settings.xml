@@ -3,21 +3,12 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/export_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/margin_padding_tiny"
-        android:layout_margin="@dimen/margin_padding_xxnormal"
-        android:gravity="center"
-        android:text="@string/export"
-        android:background="@color/primary"
-        android:textColor="@color/icons" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/margin_padding_tiny"
+            android:layout_marginTop="@dimen/margin_padding_xxnormal"
             android:layout_marginLeft="@dimen/margin_padding_xxnormal"
             android:layout_marginRight="@dimen/margin_padding_xxnormal"
             android:layout_marginBottom="@dimen/margin_padding_xxnormal"

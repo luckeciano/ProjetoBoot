@@ -53,7 +53,7 @@ public class NoteContentProvider extends ContentProvider {
         dbHelper = new DatabaseHelper(getContext());
         return false;
     }
-
+    
     @Override
     public Cursor query(Uri uri, String[] projection, String selection, String [] selectionArgs, String sortOrder ){
         queryBuilder = new SQLiteQueryBuilder();
@@ -240,5 +240,7 @@ public class NoteContentProvider extends ContentProvider {
             }
         }
     }
+
+
 
 }

@@ -36,7 +36,6 @@ public class NoteListFragment extends Fragment {
     private List<Note> mNotes;
     private List<Tag> mTags;
     private List<Rel> mRels;
-    //private String mTags;
     private RecyclerView mRecyclerView;
     private NoteListAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
@@ -46,8 +45,6 @@ public class NoteListFragment extends Fragment {
     {
         NoteListFragment.typeSort = type;
     }
-
-
 
     private void makeToast(String mensagem){
         Toast.makeText(getActivity(), mensagem, Toast.LENGTH_SHORT).show();
@@ -106,8 +103,6 @@ public class NoteListFragment extends Fragment {
                     Intent editorIntent = new Intent(getActivity(), NoteEditorActivity.class);
                     editorIntent.putExtra("id", selectedNote.getId());
                     startActivity(editorIntent);
-
-
                     //now we have the selected note
 
                 }
@@ -129,40 +124,8 @@ public class NoteListFragment extends Fragment {
         mNotes = NoteManager.newInstance(getActivity()).getAllNotes(NoteListFragment.typeSort);
         mTags = TagManager.newInstance(getActivity()).getAllTags();
         mRels = RelManager.newInstance(getActivity()).getAllRels();
-        //mTags = TagManager.newInstance(getActivity()).getAllTagsString();
         mAdapter = new NoteListAdapter(mNotes, mTags, mRels, getActivity());
         mRecyclerView.setAdapter(mAdapter);
     }
-
-
-   /* public void sortByTitle (){
-        mNotes = NoteManager.newInstance(getActivity()).getAllNotes(getTypeSort());
-        Collections.sort(mNotes, new Comparator<Note>() {
-            @Override
-            public int compare(Note lhs, Note rhs) {
-                return lhs.getTitle().compareTo(rhs.getTitle());
-            }
-        });
-        mAdapter = new NoteListAdapter(mNotes,mTags,mRels,getActivity());
-        mRecyclerView.setAdapter(mAdapter);
-
-    }
-    public void sortByCreationTime (List<Note> allNotes) {
-        Collections.sort(mNotes, new Comparator<Note>() {
-            @Override
-            public int compare(Note lhs, Note rhs) {
-                return lhs.getDateCreated().compareTo(rhs.getDateCreated());
-            }
-        });
-    }
-    public void sortByModificationTime (List<Note> allNotes) {
-        Collections.sort(mNotes, new Comparator<Note>() {
-            @Override
-            public int compare(Note lhs, Note rhs) {
-                return lhs.getDataModified().compareTo(rhs.getDataModified());
-            }
-        });
-    }*/
-
 
 }

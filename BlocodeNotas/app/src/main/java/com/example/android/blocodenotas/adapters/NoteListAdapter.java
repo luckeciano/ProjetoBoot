@@ -7,40 +7,29 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.android.blocodenotas.R;
-import com.example.android.blocodenotas.data.NoteManager;
-import com.example.android.blocodenotas.data.RelManager;
-import com.example.android.blocodenotas.data.TagManager;
 import com.example.android.blocodenotas.models.Note;
 import com.example.android.blocodenotas.models.Rel;
 import com.example.android.blocodenotas.models.Tag;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
 public class NoteListAdapter extends RecyclerView.Adapter<NoteListAdapter.ViewHolder>{
 
     private List<Note> mNotes;
-    //private List<Tag> mTags;
-    //private List<Rel> mRels;
+
     private String mTagsText;
     private Context mContext;
 
     //constructor
-    //public NoteListAdapter(List<Note> notes, String tags, Context context){
     public NoteListAdapter(List<Note> notes, List<Tag> tags, List<Rel> rels, Context context){
         mNotes = notes;
-        //mTags = tags;
-        //mRels = rels;
         mContext = context;
-
     }
 
     @Override

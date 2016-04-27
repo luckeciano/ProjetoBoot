@@ -7,7 +7,6 @@ import android.net.Uri;
 
 import com.example.android.blocodenotas.models.Note;
 import com.example.android.blocodenotas.utility.Constants;
-import com.example.android.blocodenotas.utility.Constrel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +34,6 @@ public class NoteManager {
         ContentValues values = new ContentValues();
         values.put(Constants.COLUMN_TITLE,note.getTitle());
         values.put(Constants.COLUMN_CONTENT, note.getContent());
-        //values.put(Constants.COLUMN_TAGS,note.getTags());
         values.put(Constants.COLUMN_CREATED_TIME,System.currentTimeMillis());
         values.put(Constants.COLUMN_MODIFIED_TIME,System.currentTimeMillis());
         Uri result = mContext.getContentResolver().insert(NoteContentProvider.CONTENT_URI_NOTE,values);
@@ -89,12 +87,6 @@ public class NoteManager {
         }
         return notes;
     }
-    /*
-    //Adicionar aqui dentro a busca pela query
-    public List<Note> getAllNotes(String querySearch,int typeSort){
-        List<Note> note = new ArrayList<Note>();
-        return note;
-    }*/
 
     public Note getNote(Long id){
         Note note;
@@ -112,7 +104,6 @@ public class NoteManager {
         ContentValues values = new ContentValues();
         values.put(Constants.COLUMN_TITLE,note.getTitle());
         values.put(Constants.COLUMN_CONTENT, note.getContent());
-        //values.put(Constants.COLUMN_TAGS,note.getTags());
         values.put(Constants.COLUMN_CREATED_TIME,note.getDateCreated().getTimeInMillis());
         values.put(Constants.COLUMN_MODIFIED_TIME,System.currentTimeMillis());
         mContext.getContentResolver().update(NoteContentProvider.CONTENT_URI_NOTE,
@@ -122,11 +113,5 @@ public class NoteManager {
     public void delete(Note note){
         mContext.getContentResolver().delete(NoteContentProvider.CONTENT_URI_NOTE, Constants.COLUMN_ID + "=" + note.getId(), null);
     }
-
-    public void generate_PDF(){
-
-
-    }
-
 
 }
